@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+  <channel>
+    <title>Test title</title>
+    <link>https://www.example.com</link>
+    <description>Sample description</description>
+    <item>
+      <g:id>tddy123uk</g:id>
+      <title>Google Organic Cotton Men's T-Shirt - Blue - M</title>
+      <g:description>These pens feature a generous grip for comfortable writing and a retractable ballpoint.</g:description>
+      <link>http://www.example.com/writing/google-pens</link>
+      <g:image_link>http://www.example.com/image1.jpg</g:image_link>
+      <g:mobile_link>http://www.m.example.com/writing/fiji-pens</g:mobile_link>
+      <g:additional_image_link>http://www.example.com/image2.jpg</g:additional_image_link>
+      <g:availability>in stock</g:availability>
+      <g:availability_date>2016-11-25T21:00:00.000Z</g:availability_date>
+      <g:expiration_date>2016-02-24T00:00:00.000Z</g:expiration_date>
+      <g:price>15.00 USD</g:price>
+      <g:sale_price>10.00 USD</g:sale_price>
+      <g:sale_price_effective_date>2016-02-24T21:00:00.000Z/2016-02-29T23:30:00.000Z</g:sale_price_effective_date>
+      <g:cost_of_goods_sold>10.01 USD</g:cost_of_goods_sold>
+      <g:unit_pricing_measure>750ml</g:unit_pricing_measure>
+      <g:unit_pricing_base_measure>100oz</g:unit_pricing_base_measure>
+      <g:installment>
+        <g:months>6</g:months>
+        <g:amount>50.00 BRL</g:amount>
+      </g:installment>
+      <g:loyalty_points>
+        <g:name>Program A</g:name>
+        <g:points_value>100</g:points_value>
+        <g:ratio>1.0</g:ratio>
+      </g:loyalty_points>
+      <g:google_product_category>2271</g:google_product_category>
+      <g:product_type>Home &gt; Dresses &gt; Maxi Dresses</g:product_type>
+      <g:brand>Google</g:brand>
+      <g:gtin>3234567890126</g:gtin>
+      <g:mpn>GO12345OOGLE</g:mpn>
+      <g:identifier_exists>false</g:identifier_exists>
+      <g:condition>used</g:condition>
+      <g:adult>true</g:adult>
+      <g:multipack>6</g:multipack>
+      <g:is_bundle>true</g:is_bundle>
+      <g:energy_efficiency_class>A+</g:energy_efficiency_class>
+      <g:min_energy_efficiency_class>A</g:min_energy_efficiency_class>
+      <g:max_energy_efficiency_class>D</g:max_energy_efficiency_class>
+      <g:age_group>adult</g:age_group>
+      <g:color>Orange Mango Explosion</g:color>
+      <g:gender>male</g:gender>
+      <g:material>Leather</g:material>
+      <g:pattern>Striped</g:pattern>
+      <g:size>XL</g:size>
+      <g:size_type>petite</g:size_type>
+      <g:size_system>US</g:size_system>
+      <g:item_group_id>AB12345</g:item_group_id>
+      <g:ads_redirect>http://tracking.example.com?product=ballpoint-pens</g:ads_redirect>
+      <g:custom_label_0>summer</g:custom_label_0>
+      <g:custom_label_2>spring</g:custom_label_2>
+      <g:custom_label_4>winter</g:custom_label_4>
+      <g:promotion_id>tbby123_us</g:promotion_id>
+      <g:included_destination>DisplayAds</g:included_destination>
+      <g:excluded_destination>Shopping</g:excluded_destination>
+      <g:excluded_destination>DisplayAds</g:excluded_destination>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:region>MA</g:region>
+        <g:service>Ground</g:service>
+        <g:price>6.49 USD</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:region>MA</g:region>
+        <g:service>Express</g:service>
+        <g:price>15.99 USD</g:price>
+      </g:shipping>
+      <g:shipping_label>oversized</g:shipping_label>
+      <g:shipping_weight>3 kg</g:shipping_weight>
+      <g:shipping_length>20 in</g:shipping_length>
+      <g:shipping_width>40 in</g:shipping_width>
+      <g:shipping_height>10 in</g:shipping_height>
+      <g:min_handling_time>1</g:min_handling_time>
+      <g:max_handling_time>3</g:max_handling_time>
+      <g:tax>
+        <g:country>US</g:country>
+        <g:region>MA</g:region>
+        <g:rate>5.00</g:rate>
+        <g:tax_ship>yes</g:tax_ship>
+      </g:tax>
+      <g:tax>
+        <g:country>US</g:country>
+        <g:region>WA</g:region>
+        <g:rate>4.00</g:rate>
+        <g:tax_ship>no</g:tax_ship>
+      </g:tax>
+      <g:tax_category>apparel</g:tax_category>
+    </item>
+    <item>
+      <g:id>200</g:id>
+      <title>Sample title 2</title>
+      <g:additional_image_link>http://www.example.com/image0.jpg</g:additional_image_link>
+      <g:additional_image_link>http://www.example.com/image1.jpg</g:additional_image_link>
+      <g:price>9.99 EUR</g:price>
+      <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Dresses</g:google_product_category>
+      <g:product_type>category 1</g:product_type>
+      <g:product_type>category 2</g:product_type>
+      <g:shipping>
+        <g:country>DE</g:country>
+        <g:region>Berlin</g:region>
+        <g:service>Express</g:service>
+        <g:price>1.99 EUR</g:price>
+      </g:shipping>
+      <g:tax>
+        <g:country>DE</g:country>
+        <g:region>Berlin</g:region>
+        <g:rate>3.50</g:rate>
+        <g:tax_ship>no</g:tax_ship>
+      </g:tax>
+    </item>
+  </channel>
+</rss>
