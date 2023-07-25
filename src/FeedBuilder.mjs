@@ -1,4 +1,4 @@
-const xmlbuilder = require('xmlbuilder2');
+import xmlbuilder from 'xmlbuilder2';
 
 function xmlPriceFormatter(price) {
   return price && !Number.isNaN(price.price) && `${price.price.toFixed(2)} ${price.currency && price.currency.toUpperCase()}`;
@@ -173,7 +173,7 @@ const xmlPropertiesMap = {
   taxCategory: { xmlName: 'g:tax_category' },
 };
 
-class FeedBuilder {
+export default class FeedBuilder {
   #title;
 
   #link;
@@ -267,5 +267,3 @@ class FeedBuilder {
     return xml.end({ prettyPrint: true });
   }
 }
-
-module.exports = FeedBuilder;

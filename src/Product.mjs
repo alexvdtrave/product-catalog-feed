@@ -1,19 +1,19 @@
-const ProductDateRange = require('./ProductDateRange');
-const ProductPrice = require('./ProductPrice');
-const ProductInstallment = require('./ProductInstallment');
-const ProductLoyaltyPoints = require('./ProductLoyaltyPoints');
-const ProductShipping = require('./ProductShipping');
-const ProductTax = require('./ProductTax');
-const {
+import ProductDateRange from './ProductDateRange.mjs';
+import ProductPrice from './ProductPrice.mjs';
+import ProductInstallment from './ProductInstallment.mjs';
+import ProductLoyaltyPoints from './ProductLoyaltyPoints.mjs';
+import ProductShipping from './ProductShipping.mjs';
+import ProductTax from './ProductTax.mjs';
+import {
   UnitPricingMeasure,
   ShippingWeight,
   ShippingDimension,
-} = require('./Units');
+} from './Units.mjs';
 
 /**
  * Defines a product.
  */
-class Product {
+export default class Product {
   #id;
 
   #title;
@@ -1152,5 +1152,3 @@ Product.ADS_DESTINATION = {
   SHOPPING_ACTIONS: 'ShoppingActions',
   DISPLAY_ADS: 'DisplayAds',
 };
-
-module.exports = Product;

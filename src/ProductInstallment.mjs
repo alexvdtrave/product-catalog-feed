@@ -1,9 +1,9 @@
-const ProductPrice = require('./ProductPrice');
+import ProductPrice from './ProductPrice.mjs';
 
 /**
  * Defines a monthly installment plan for a product.
  */
-class ProductInstallment {
+export default class ProductInstallment {
   #months;
 
   #amount;
@@ -53,5 +53,3 @@ class ProductInstallment {
     this.#amount = value;
   }
 }
-
-module.exports = ProductInstallment;

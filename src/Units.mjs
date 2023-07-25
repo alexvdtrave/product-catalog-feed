@@ -51,15 +51,8 @@ class ValueUnit {
   }
 }
 
-class UnitPricingMeasure extends ValueUnit { }
+export class UnitPricingMeasure extends ValueUnit { }
 
-class ShippingWeight extends ValueUnit { }
+export class ShippingWeight extends ValueUnit { }
 
-class ShippingDimension extends ValueUnit {}
-
-module.exports = {
-  ValueUnit,
-  UnitPricingMeasure,
-  ShippingWeight,
-  ShippingDimension,
-};
+export class ShippingDimension extends ValueUnit {}

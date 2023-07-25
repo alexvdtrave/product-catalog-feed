@@ -1,7 +1,7 @@
 /**
  * Defines a price with currency.
  */
-class ProductPrice {
+export default class ProductPrice {
   #price;
 
   #currency;
@@ -48,5 +48,3 @@ class ProductPrice {
     this.#currency = value;
   }
 }
-
-module.exports = ProductPrice;

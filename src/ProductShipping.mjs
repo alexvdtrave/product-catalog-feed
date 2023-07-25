@@ -1,12 +1,10 @@
+import ProductPrice from './ProductPrice.mjs';
+
 /**
- * Defines a tax rate of a product.
+ * Defines product shipping information.
  */
-class ProductTax {
-  #rate;
-
+export default class ProductShipping {
   #country;
-
-  #taxShip;
 
   #region;
 
@@ -16,20 +14,16 @@ class ProductTax {
 
   #locationGroupName;
 
-  /**
-   * Gets a tax rate as a percentage of the price.
-   * @returns {Number}
-   */
-  get rate() {
-    return this.#rate;
-  }
+  #service;
+
+  #price;
 
   /**
-   * Sets a tax rate as a percentage of the price.
-   * @param {Number} value
+   * Creates an instance of ProductShipping class.
+   * @param {ProductPrice} price Shipping cost
    */
-  set rate(value) {
-    this.#rate = value;
+  constructor(price) {
+    this.price = price;
   }
 
   /**
@@ -48,22 +42,6 @@ class ProductTax {
    */
   set country(value) {
     this.#country = value;
-  }
-
-  /**
-   * Gets a flag indicating whether a tax is charged on shipping.
-   * @returns {Boolean}
-   */
-  get taxShip() {
-    return this.#taxShip;
-  }
-
-  /**
-   * Sets a flag indicating whether a tax is charged on shipping.
-   * @returns {Boolean}
-   */
-  set taxShip(value) {
-    this.#taxShip = value;
   }
 
   /**
@@ -131,6 +109,39 @@ class ProductTax {
   set locationGroupName(value) {
     this.#locationGroupName = value;
   }
-}
 
-module.exports = ProductTax;
+  /**
+   * Gets a service class or shipping speed.
+   * @returns {String}
+   */
+  get service() {
+    return this.#service;
+  }
+
+  /**
+   * Sets a service class or shipping speed.
+   * @param {String} value
+   */
+  set service(value) {
+    this.#service = value;
+  }
+
+  /**
+   * Gets a shipping cost.
+   * @returns {ProductPrice}
+   */
+  get price() {
+    return this.#price;
+  }
+
+  /**
+   * Sets a shipping cost.
+   * @param {ProductPrice} value
+   */
+  set price(value) {
+    if (!(value instanceof ProductPrice)) {
+      throw new Error('price expects instance of ProductPrice as argument.');
+    }
+    this.#price = value;
+  }
+}

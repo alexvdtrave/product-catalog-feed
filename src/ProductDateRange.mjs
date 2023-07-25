@@ -1,7 +1,7 @@
 /**
  * Defines a date range when an offer for an item is valid.
  */
-class ProductDateRange {
+export default class ProductDateRange {
   #dateFrom;
 
   #dateTo;
@@ -60,5 +60,3 @@ class ProductDateRange {
     this.#dateTo = value;
   }
 }
-
-module.exports = ProductDateRange;

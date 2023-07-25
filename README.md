@@ -16,7 +16,7 @@ npm install @alexvdtrave/product-catalog-feed
 Here is an example of how a product feed can be generated.
 
 ```JavaScript
-const { Product, ProductPrice, FeedBuilder } = require('@alexvdtrave/product-catalog-feed');
+import { Product, ProductPrice, FeedBuilder } from '@alexvdtrave/product-catalog-feed';
 
 const pickwick = new Product();
 pickwick.id = 'id-pickwick-papers-dickens';
@@ -74,7 +74,7 @@ The following XML document is generated.
 ## Running the tests
 ```
 npm test
-npm lint
+npm run lint
 ```
 
 ## License

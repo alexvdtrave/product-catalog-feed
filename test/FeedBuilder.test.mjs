@@ -1,7 +1,8 @@
-/* eslint-disable no-undef */
-const fs = require('fs');
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'fs';
 
-const {
+import {
   FeedBuilder,
   Product,
   ProductPrice,
@@ -13,10 +14,10 @@ const {
   ShippingWeight,
   ShippingDimension,
   ProductTax,
-} = require('../index');
+} from '../src/index.mjs';
 
-describe('XML feed generation', () => {
-  it('Generates document with example definitions', () => {
+test('XML feed generation', async (t) => {
+  await t.test('Generates document with example definitions', async () => {
     const pickwick = new Product();
     pickwick.id = 'id-pickwick-papers-dickens';
     pickwick.title = 'The Pickwick Papers: Charles Dickens';
@@ -43,10 +44,10 @@ describe('XML feed generation', () => {
 
     const expectedXml = fs.readFileSync('test/fixtures/example_feed.xml').toString();
 
-    expect(xml).toEqual(expectedXml);
+    assert.equal(xml, expectedXml);
   });
 
-  it('Generates document with example definitions passed as array', () => {
+  await t.test('Generates document with example definitions passed as array', async () => {
     const pickwick = new Product();
     pickwick.id = 'id-pickwick-papers-dickens';
     pickwick.title = 'The Pickwick Papers: Charles Dickens';
@@ -73,10 +74,10 @@ describe('XML feed generation', () => {
 
     const expectedXml = fs.readFileSync('test/fixtures/example_feed.xml').toString();
 
-    expect(xml).toEqual(expectedXml);
+    assert.equal(xml, expectedXml);
   });
 
-  it('Generates document with all definitions', () => {
+  await t.test('Generates document with all definitions', async () => {
     const product1 = new Product();
     product1.id = 'tddy123uk';
     product1.title = 'Google Organic Cotton Men\'s T-Shirt - Blue - M';
@@ -198,6 +199,6 @@ describe('XML feed generation', () => {
 
     const expectedXml = fs.readFileSync('test/fixtures/sample_valid_feed.xml').toString();
 
-    expect(actualXml).toEqual(expectedXml);
+    assert.equal(actualXml, expectedXml);
   });
 });

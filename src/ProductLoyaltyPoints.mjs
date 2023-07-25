@@ -1,7 +1,7 @@
 /**
  * Defines how many and what type of loyalty points a user receives when buying a product.
  */
-class ProductLoyaltyPoints {
+export default class ProductLoyaltyPoints {
   #name;
 
   #pointsValue;
@@ -68,5 +68,3 @@ class ProductLoyaltyPoints {
     this.#ratio = value !== undefined ? value : 1.0;
   }
 }
-
-module.exports = ProductLoyaltyPoints;
