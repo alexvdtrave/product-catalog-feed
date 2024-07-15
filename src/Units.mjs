@@ -1,6 +1,4 @@
-/* eslint-disable max-classes-per-file */
-
-/**
+ /**
  * Defines a base class for a value-unit pair.
  */
 class ValueUnit {

@@ -31,7 +31,6 @@ function xmlFixedNumberFormatBuilder(precision) {
 function xmlCustomLabelsFormatter(item, map, root) {
   for (let i = 0; i < 5; i += 1) {
     if (item[i] !== undefined) {
-      // eslint-disable-next-line no-param-reassign
       root[`g:custom_label_${i}`] = item[i];
     }
   }
