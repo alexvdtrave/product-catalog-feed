@@ -1,4 +1,6 @@
-# product-catalog-feed
+# Product Catalog Feed
+![Node CI](https://github.com/alexvdtrave/product-catalog-feed/actions/workflows/node-ci.yml/badge.svg)
+![CodeQL](https://github.com/alexvdtrave/product-catalog-feed/actions/workflows/github-code-scanning/codeql/badge.svg)
 
 A framework to generate product catalog feed according to [Google Merchant Product Data Feed](https://support.google.com/merchants/answer/7052112) specification and [Facebook Business Product Data Catalog RSS XML Feed](https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/product-catalog#feed-format).
 
