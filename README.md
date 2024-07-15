@@ -9,6 +9,10 @@ A framework to generate product catalog feed according to [Google Merchant Produ
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Installing
+You may need to add the following to ```.npmrc```.
+```
+@alexvdtrave:registry=https://npm.pkg.github.com
+```
 ```shell
 npm install @alexvdtrave/product-catalog-feed
 ```
