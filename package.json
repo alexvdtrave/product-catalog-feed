@@ -29,17 +29,13 @@
   },
   "scripts": {
     "test": "node --test",
-    "lint": "eslint src/**.mjs test/**.mjs --fix",
-    "update": "ncu -u",
-    "update-check": "ncu"
+    "lint": "eslint src/**.mjs test/**.mjs --fix"
   },
   "dependencies": {
     "xmlbuilder2": "^4.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "eslint": "^10.9.0",
-    "globals": "^17.11.0",
-    "npm-check-updates": "^23.0.2"
+    "eslint": "^10.13.0"
   }
 }
