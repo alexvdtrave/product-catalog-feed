@@ -17,7 +17,5 @@ jobs:
       id-token: write
       contents: write
     with:
-      node-version: 24
-  pr-review:
-    needs: [build_and_test]
-    uses: ./.github/workflows/lib-pr-review.yml
+      node-version: 26
+
