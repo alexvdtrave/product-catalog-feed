@@ -1,4 +1,7 @@
-# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+# ==============================================================================
+# Dependabot Configuration (Optimized with PR Grouping)
+# ==============================================================================
+# Documentation: https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
 updates:
@@ -6,8 +9,34 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    open-pull-requests-limit: 10
+    groups:
+      all-non-major:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+      security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"
 
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "monthly"
+    open-pull-requests-limit: 10
+    allow:
+      - dependency-type: "direct"
+    groups:
+      all-non-major:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+      security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"
