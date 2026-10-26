@@ -201,4 +201,26 @@ test('XML feed generation', async (t) => {
 
     assert.equal(actualXml, expectedXml);
   });
+
+  await t.test('FeedBuilder.groupBy groups products by property and function', async () => {
+    const p1 = new Product({ id: '1', brand: 'BrandA' });
+    const p2 = new Product({ id: '2', brand: 'BrandB' });
+    const p3 = new Product({ id: '3', brand: 'BrandA' });
+
+    const grouped = FeedBuilder.groupBy([p1, p2, p3], 'brand');
+    assert.equal(grouped.BrandA.length, 2);
+    assert.equal(grouped.BrandB.length, 1);
+
+    const groupedByFn = FeedBuilder.groupBy([p1, p2, p3], (p) => p.id);
+    assert.equal(groupedByFn['1'].length, 1);
+  });
+
+  await t.test('FeedBuilder.withProducts throws TypeError if argument is not an array', async () => {
+    assert.throws(
+      () => {
+        new FeedBuilder().withProducts('not-an-array');
+      },
+      TypeError,
+    );
+  });
 });

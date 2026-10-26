@@ -303,4 +303,17 @@ test('Product arguments validation', async (t) => {
 
     assert(actual.tax instanceof ProductTax);
   });
+
+  await t.test('constructor initializes properties when init object is passed.', async () => {
+    const p = new Product({
+      id: 'prod-123',
+      title: 'Constructor Product',
+      price: new ProductPrice(25, 'USD'),
+    });
+
+    assert.equal(p.id, 'prod-123');
+    assert.equal(p.title, 'Constructor Product');
+    assert(p.price instanceof ProductPrice);
+    assert.equal(p.price.price, 25);
+  });
 });

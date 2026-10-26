@@ -32,7 +32,7 @@ export default class ProductDateRange {
    */
   set dateFrom(value) {
     if (!(value instanceof Date)) {
-      throw new Error('dateFrom expects instance of Date as argument.');
+      throw new TypeError('dateFrom expects instance of Date as argument.');
     }
 
     this.#dateFrom = value;
@@ -54,7 +54,7 @@ export default class ProductDateRange {
    */
   set dateTo(value) {
     if (!(value instanceof Date)) {
-      throw new Error('dateTo expects instance of Date as argument.');
+      throw new TypeError('dateTo expects instance of Date as argument.');
     }
 
     this.#dateTo = value;

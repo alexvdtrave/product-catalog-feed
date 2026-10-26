@@ -25,10 +25,11 @@
     "feed"
   ],
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=26.0.0"
   },
   "scripts": {
     "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage",
     "lint": "eslint src/**.mjs test/**.mjs --fix"
   },
   "dependencies": {

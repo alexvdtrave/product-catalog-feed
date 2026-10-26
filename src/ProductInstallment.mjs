@@ -4,7 +4,7 @@ import ProductPrice from './ProductPrice.mjs';
  * Defines a monthly installment plan for a product.
  */
 export default class ProductInstallment {
-  #months;
+  months;
 
   #amount;
 
@@ -16,22 +16,6 @@ export default class ProductInstallment {
   constructor(months, amount) {
     this.months = months;
     this.amount = amount;
-  }
-
-  /**
-   * Gets a number of installments a user has to pay
-   * @returns {Number}
-   */
-  get months() {
-    return this.#months;
-  }
-
-  /**
-   * Sets a number of installments a user has to pay
-   * @param {Number} value
-   */
-  set months(value) {
-    this.#months = value;
   }
 
   /**
@@ -48,7 +32,7 @@ export default class ProductInstallment {
    */
   set amount(value) {
     if (!(value instanceof ProductPrice)) {
-      throw new Error('amount expects instance of ProductPrice as argument.');
+      throw new TypeError('amount expects instance of ProductPrice as argument.');
     }
     this.#amount = value;
   }

@@ -1,11 +1,11 @@
 import xmlbuilder from 'xmlbuilder2';
 
 function xmlPriceFormatter(price) {
-  return price && !Number.isNaN(price.price) && `${price.price.toFixed(2)} ${price.currency && price.currency.toUpperCase()}`;
+  return price && !Number.isNaN(price.price) && `${price.price.toFixed(2)} ${price.currency?.toUpperCase() ?? ''}`.trim();
 }
 
 function xmlDateFormatter(date) {
-  return date && date.toISOString();
+  return date?.toISOString?.();
 }
 
 function xmlDateRangeFormatter(range) {
@@ -181,8 +181,19 @@ export default class FeedBuilder {
 
   #description;
 
-  constructor(options) {
-    this.options = options || {};
+  constructor(options = {}) {
+    this.options = options;
+  }
+
+  /**
+   * Groups products using native Object.groupBy.
+   * @param {Iterable} products Iterable collection of Product objects
+   * @param {String|Function} keyOrFn Property name or callback function returning the group key
+   * @returns {Object} Grouped products dictionary
+   */
+  static groupBy(products, keyOrFn) {
+    const fn = typeof keyOrFn === 'function' ? keyOrFn : (item) => item[keyOrFn] ?? 'undefined';
+    return Object.groupBy(products, fn);
   }
 
   /**
@@ -219,7 +230,7 @@ export default class FeedBuilder {
    */
   withProducts(products) {
     if (!Array.isArray(products)) {
-      throw new Error('products expects an array of Product');
+      throw new TypeError('products expects an array of Product');
     }
 
     this.#products = this.#products.concat(products);
